@@ -3,23 +3,14 @@ from mysql.connector import Error
 import os
 from dotenv import load_dotenv
 
-
 class Database:
     def __init__(self):
         load_dotenv()
-        # test if environment variables are loaded
-        print(os.getenv("DB_NAME"))
-        print(os.getenv("DB_USER"))
-        print(os.getenv("DB_PASSWORD"))
-        print(os.getenv("DB_HOST"))
-
-        # self.dbname = os.getenv("DB_NAME")
-        # self.user = os.getenv("DB_USER")
-        # self.password = os.getenv("DB_PASSWORD")
-        # self.host = os.getenv("DB_HOST")
+        self.dbname = os.getenv("DB_NAME")
+        self.user = os.getenv("DB_USER")
+        self.password = os.getenv("DB_PASSWORD")
+        self.host = os.getenv("DB_HOST")
         self.connection = None
-
-
 
     def connect(self):
         try:
