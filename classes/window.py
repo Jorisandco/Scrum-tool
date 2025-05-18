@@ -8,7 +8,7 @@ class Window:
         self.frame = Frame(self.root)
         self.frame.pack(fill="both", expand=True)
         self.root.geometry(f"{width}x{height}")
-        self.create_widgets()
+        self.create_test_widgets()
         self.root.mainloop()
 
     def addButton(self, text: str, command, pady: int):
